@@ -160,6 +160,8 @@ a {
   #hero .container img {
     margin-bottom: 150px; }
   #hero .container h1 {
+    display: block;
+    width: 75%;
     margin-bottom: 200px;
     font-size: 3.333em; } }
 
