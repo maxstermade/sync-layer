@@ -60,7 +60,7 @@ img {
 
 /**** Typography Defaults ****/
 body {
-  font-size: 0.833em;
+  font-size: 18px;
   font-family: "Nunito Sans", sans-serif;
   color: #0c1723;
   background-color: #fff;
@@ -70,21 +70,21 @@ h1 {
   font-size: 3em;
   font-weight: 800;
   color: #fff;
-  line-height: 1.4em; }
+  line-height: 1.2em; }
 
 h2 {
-  font-size: 1.556em;
+  font-size: 1.333em;
   color: #f1884c;
   font-weight: 700;
   margin-bottom: 25px;
   text-transform: uppercase;
-  line-height: 1.4em; }
+  line-height: 1.2em; }
 
 h3 {
   font-size: 3em;
   margin-bottom: 25px;
-  font-weight: 600;
-  line-height: 1.4em; }
+  font-weight: 300;
+  line-height: 1.2em; }
 
 h4 {
   font-size: 1.333em;
@@ -100,8 +100,8 @@ p {
   margin-bottom: 1.5em;
   line-height: 1.5em;
   color: #0c1723;
-  font-weight: 600;
-  font-size: 1.556em; }
+  font-weight: 400;
+  font-size: 18px; }
   p:last-child {
     margin-bottom: 0; }
   p strong, p b {
@@ -116,7 +116,7 @@ a {
     display: inline-block;
     text-transform: uppercase;
     color: #fff;
-    padding: 10px 40px;
+    padding: 15px 40px;
     background-color: #f1884c;
     border-radius: 0px;
     border: 2px #f1884c solid; }

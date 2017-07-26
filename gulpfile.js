@@ -12,16 +12,11 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var ghPages = require('gulp-gh-pages');
-
-// Basic Gulp task syntax
-gulp.task('hello', function() {
-  console.log('Hello Zell!');
-})
+var htmlmin = require('gulp-htmlmin');
 
 // Development Tasks
 // -----------------
 
-// Start browserSync server
 gulp.task('browserSync', function() {
   browserSync({
     server: {
@@ -31,10 +26,10 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('sass', function() {
-  return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-    .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
-    .pipe(gulp.dest('app/css')) // Outputs it in the css folder
-    .pipe(browserSync.reload({ // Reloading with Browser Sync
+  return gulp.src('app/scss/**/*.scss') // Retrieves all scss files
+    .pipe(sass().on('error', sass.logError)) // passes files, logs errors
+    .pipe(gulp.dest('app/css')) // outputs clean css
+    .pipe(browserSync.reload({ // reloads browsers
       stream: true
     }));
 })
@@ -51,11 +46,11 @@ gulp.task('watch', function() {
 
 // Optimizing CSS and JavaScript
 gulp.task('useref', function() {
-
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 });
 
