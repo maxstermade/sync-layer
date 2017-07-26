@@ -54,6 +54,10 @@ table {
 /* Fonts */
 /* Font Sizes */
 /* Global Variables */
+img {
+  max-width: 100%;
+  height: auto !important; }
+
 /**** Typography Defaults ****/
 body {
   font-size: 0.833em;
@@ -63,7 +67,7 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 h1 {
-  font-size: 3.333em;
+  font-size: 3em;
   font-weight: 800;
   color: #fff;
   line-height: 1.4em; }
@@ -71,24 +75,21 @@ h1 {
 h2 {
   font-weight: 300;
   color: #0c1723;
-  font-size: 3em; }
+  font-size: 2.5em; }
 
 h3 {
-  font-size: 1.333em;
-  font-weight: 300;
-  color: 400; }
+  font-size: 1.556em;
+  font-weight: 300; }
 
 h4 {
-  font-weight: 300;
-  font-size: 1.556em;
+  font-size: 1.333em;
   color: #0c1723; }
 
 h5 {
-  font-size: 0.833em;
-  font-weight: 800;
-  margin-bottom: 1em;
-  color: #5b6670;
-  text-transform: uppercase; }
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: auto;
+  color: #5b6670; }
 
 p {
   margin-bottom: 1.5em;
@@ -107,6 +108,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.05em; }
   a.button {
+    display: inline-block;
     text-transform: uppercase;
     color: #fff;
     padding: 10px 40px;
@@ -119,7 +121,6 @@ a {
   a:hover {
     color: #f1884c; }
 
-/**** Global Styles ****/
 #hero {
   position: relative;
   background-image: url(/images/hero.jpg);
@@ -129,12 +130,10 @@ a {
     margin: auto;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 900px; }
+    max-width: 100%; }
     @media (min-width: 768px) {
       #hero .container {
         width: 720px;
@@ -152,6 +151,177 @@ a {
         padding-right: 0; } }
     #hero .container img {
       max-width: 300px;
-      align-self: flex-start; }
+      margin-bottom: 100px; }
     #hero .container h1 {
-      align-self: center; }
+      display: inline-block;
+      margin-bottom: 100px; }
+
+@media (min-width: 1000px) {
+  #hero .container img {
+    margin-bottom: 150px; }
+  #hero .container h1 {
+    margin-bottom: 200px;
+    font-size: 3.333em; } }
+
+#products {
+  width: auto;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media (min-width: 768px) {
+    #products {
+      width: 720px;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 1000px) {
+    #products {
+      width: 960px;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 1280px) {
+    #products {
+      width: 1200px;
+      padding-left: 0;
+      padding-right: 0; } }
+  #products h2 {
+    font-size: 1.889em;
+    color: #f1884c;
+    font-weight: 700;
+    margin-bottom: 25px; }
+  #products .product .content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 25px 0px; }
+    #products .product .content h3 {
+      font-size: 2.5em;
+      margin-bottom: 25px; }
+
+@media (min-width: 1000px) {
+  #products {
+    padding: 100px 0px; }
+    #products .product .content {
+      display: inline-block;
+      width: 49%;
+      padding-top: 0px;
+      vertical-align: top; }
+      #products .product .content h3 {
+        font-size: 3em; }
+      #products .product .content p:last-of-type {
+        margin-bottom: 50px; }
+    #products .product figure {
+      display: inline-block;
+      margin-left: 2%;
+      margin-right: -4px;
+      width: 49%;
+      vertical-align: middle; } }
+
+#about {
+  background-color: #ecf2f3; }
+  #about .container {
+    width: auto;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    padding-left: 20px;
+    padding-right: 20px; }
+    @media (min-width: 768px) {
+      #about .container {
+        width: 720px;
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (min-width: 1000px) {
+      #about .container {
+        width: 960px;
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (min-width: 1280px) {
+      #about .container {
+        width: 1200px;
+        padding-left: 0;
+        padding-right: 0; } }
+    #about .container .content {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-bottom: 25px; }
+      #about .container .content h2 {
+        font-weight: 300;
+        margin-bottom: 50px; }
+    #about .container aside {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #7cb6c1;
+      padding: 25px; }
+      #about .container aside h3 {
+        color: #fff;
+        margin-bottom: 37.5px; }
+      #about .container aside h5 {
+        color: #fff; }
+      #about .container aside p {
+        color: #fff; }
+      #about .container aside a {
+        color: #fff; }
+        #about .container aside a:hover, #about .container aside a:focus {
+          color: #f1884c; }
+
+@media (min-width: 1000px) {
+  #about .container {
+    padding: 100px 0px;
+    overflow-y: hidden; }
+    #about .container .content {
+      display: block;
+      float: left;
+      width: 48%; }
+      #about .container .content h2 {
+        font-size: 3em; }
+    #about .container aside {
+      display: block;
+      float: left;
+      margin-left: 3%;
+      width: 49%; }
+      #about .container aside h3 {
+        font-size: 3.00em; } }
+
+footer {
+  width: auto;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  padding-left: 20px;
+  padding-right: 20px; }
+  @media (min-width: 768px) {
+    footer {
+      width: 720px;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 1000px) {
+    footer {
+      width: 960px;
+      padding-left: 0;
+      padding-right: 0; } }
+  @media (min-width: 1280px) {
+    footer {
+      width: 1200px;
+      padding-left: 0;
+      padding-right: 0; } }
+  footer img {
+    max-width: 200px;
+    margin-bottom: 25px; }
+  footer span {
+    display: block; }
+
+@media (min-width: 1000px) {
+  footer img {
+    margin-bottom: 0px; }
+  footer span {
+    width: 50%;
+    float: right;
+    text-align: right;
+    margin-top: 25px; } }
