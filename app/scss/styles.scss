@@ -24,14 +24,19 @@ h1 {
 }
 
 h2 {
-  font-weight: $light;
-  color: $black;
-  font-size: $font-5;
+  font-size: $font-3;
+	color: $orange;
+	font-weight: $bold;
+	margin-bottom: $global-padding * 1;
+	text-transform: uppercase;
+	line-height: 1.4em;
 }
 
 h3 {
-  font-size: $font-3;
-	font-weight: $light;
+  font-size: $font-6;
+	margin-bottom: $global-padding;
+	font-weight: $sbold;
+	line-height: 1.4em;
 }
 
 h4 {
@@ -49,8 +54,8 @@ p {
   margin-bottom: 1.5em;
   line-height: 1.5em;
   color: $black;
-  font-weight: $regular;
-  font-size: $font-1;
+  font-weight: $sbold;
+  font-size: $font-3;
 
    &:last-child {
     margin-bottom: 0;
@@ -99,10 +104,11 @@ a {
 
 		img {
 			max-width: 300px;
-			margin-bottom: 100px;
+			margin-bottom: 50px;
 		}
 
 		h1 {
+			font-size: 2em;
 			display: inline-block;
 			margin-bottom: 100px;
 		}
@@ -113,7 +119,7 @@ a {
 	#hero {
 		.container {
 			img {
-					margin-bottom: 150px;
+					margin-bottom: 100px;
 			}
 
 			h1 {
@@ -131,21 +137,12 @@ a {
 #products {
 	@include wrapper(auto, 50px);
 
-	h2 {
-		font-size: $font-4;
-		color: $orange;
-		font-weight: $bold;
-		margin-bottom: $global-padding;
-	}
-
 	.product {
 		.content {
 			@include border-box();
 			padding: $global-padding 0px;
 
 			h3 {
-				font-size: $font-5;
-				margin-bottom: $global-padding;
 			}
 		}
 	}
@@ -192,36 +189,32 @@ a {
 		.content {
 			@include border-box();
 			margin-bottom: $global-padding;
-
-			h2 {
-				font-weight: $light;
-				margin-bottom: $global-padding * 2;
-			}
 		}
 
-		aside {
-			@include border-box();
-			background-color: $blue;
-			padding: $global-padding;
+		.contact {
+			li {
+				margin: 25px 0px;
+				i {
+					display: inline-block;
+					height: 30px;
+					width: 30px;
+					margin-right: $global-padding;
+					background-size: contain;
+					background-position: center center;
+					vertical-align: middle;
 
-			h3 {
-				color: $white;
-				margin-bottom: $global-padding * 1.5;
-			}
+					&.phone {
+						background-image: url('../images/icon_phone.png');
+					}
 
-			h5 {
-				color: $white;
-			}
+					&.email {
+						background-image: url('../images/icon_email.png');
+					}
+				}
 
-			p {
-				color: $white;
-			}
-
-			a {
-				color: $white;
-
-				&:hover, &:focus {
-					color: $orange;
+				p {
+					display: inline-block;
+					vertical-align: middle;
 				}
 			}
 		}
@@ -233,24 +226,15 @@ a {
 		.container {
 			padding: 100px 0px;
 			overflow-y: hidden;
+
 			.content {
 				display: block;
-				float: left;
-				width: 48%;
-
-				h2 {
-					font-size: 3em;
-				}
 			}
 
-			aside {
-				display: block;
-				float: left;
-				margin-left: 3%;
-				width: 49%;
-
-				h3 {
-					font-size: 3.00em;
+			.contact {
+				li {
+					display: inline-block;
+					width: 25%;
 				}
 			}
 		}
@@ -260,29 +244,31 @@ a {
 
 //start of footer
 footer {
-	@include wrapper(auto, $global-padding);
+	background-color: #555555;
+
+	.container {
+		@include wrapper(auto, $global-padding);
+		text-align: center;
+	}
 
 	img {
-		max-width: 200px;
+		max-width: 250px;
 		margin-bottom: $global-padding;
+		-webkit-filter: brightness(0) invert(1);
+		filter: brightness(0) invert(1);
 	}
 
 	span {
 		display: block;
+		color: $white;
 	}
 }
 
 @media (min-width: $breakpoint-laptop) {
 	footer {
-		img {
-			margin-bottom: 0px;
-		}
-
-		span {
-			width: 50%;
-			float: right;
+		.container {
+			padding: 50px 0px;
 			text-align: right;
-			margin-top: $global-padding;
 		}
 	}
 }
