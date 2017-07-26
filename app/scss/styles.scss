@@ -1,3 +1,111 @@
-.testing {
-  width: percentage(5/7);
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+
+
+/**** Typography Defaults ****/
+body {
+	font-size: $font-s;
+	font-family: $font-default;
+	color: $black;
+	background-color: $white;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: $font-6;
+  font-weight: $xbold;
+  color: $white;
+	line-height: 1.4em;
+}
+
+h2 {
+  font-weight: $light;
+  color: $black;
+  font-size: $font-5;
+}
+
+h3 {
+  font-size: $font-2;
+	font-weight: $light;
+	color: $regular;
+}
+
+h4 {
+	font-weight: $light;
+  font-size: $font-3;
+  color: $black;
+}
+h5 {
+	font-size: $font-s;
+	font-weight: $xbold;
+	margin-bottom: 1em;
+	color: $gray;
+	text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+  color: $black;
+  font-weight: $regular;
+  font-size: $font-1;
+
+   &:last-child {
+    margin-bottom: 0;
+  }
+
+  strong, b {
+	  font-weight: $bold;
+  }
+}
+
+a {
+	text-decoration: none;
+	color: $blue;
+	font-weight: $xbold;
+	letter-spacing: 0.05em;
+
+  &.button {
+		text-transform: uppercase;
+		color: $white;
+		padding: 10px 40px;
+    background-color: $orange;
+    border-radius: 0px;
+    border: 2px $orange solid;
+
+    &:hover {
+	  	background-color: transparent;
+	  	color: $orange;
+  	}
+  }
+
+  &:hover {
+	  color: $orange;
+  }
+}
+
+
+/**** Global Styles ****/
+#hero {
+  position: relative;
+  background-image: url(/images/hero.jpg);
+  background-size: cover;
+
+  .container {
+    @include wrapper(auto, 20px);
+		display: flex;
+		flex-direction: column;
+		min-height: 900px;
+
+		img {
+			max-width: 300px;
+			align-self: flex-start;
+		}
+
+		h1 {
+			align-self: center;
+		}
+  }
 }

@@ -1,2 +1,157 @@
-.testing {
-  width: 71.42857%; }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* Colors */
+/* Breakpoints */
+/* Wrapper Widths */
+/* Fonts */
+/* Font Sizes */
+/* Global Variables */
+/**** Typography Defaults ****/
+body {
+  font-size: 0.833em;
+  font-family: "Nunito Sans", sans-serif;
+  color: #0c1723;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-size: 3.333em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4em; }
+
+h2 {
+  font-weight: 300;
+  color: #0c1723;
+  font-size: 3em; }
+
+h3 {
+  font-size: 1.333em;
+  font-weight: 300;
+  color: 400; }
+
+h4 {
+  font-weight: 300;
+  font-size: 1.556em;
+  color: #0c1723; }
+
+h5 {
+  font-size: 0.833em;
+  font-weight: 800;
+  margin-bottom: 1em;
+  color: #5b6670;
+  text-transform: uppercase; }
+
+p {
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+  color: #0c1723;
+  font-weight: 400;
+  font-size: 18px; }
+  p:last-child {
+    margin-bottom: 0; }
+  p strong, p b {
+    font-weight: 700; }
+
+a {
+  text-decoration: none;
+  color: #7cb6c1;
+  font-weight: 800;
+  letter-spacing: 0.05em; }
+  a.button {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px 40px;
+    background-color: #f1884c;
+    border-radius: 0px;
+    border: 2px #f1884c solid; }
+    a.button:hover {
+      background-color: transparent;
+      color: #f1884c; }
+  a:hover {
+    color: #f1884c; }
+
+/**** Global Styles ****/
+#hero {
+  position: relative;
+  background-image: url(/images/hero.jpg);
+  background-size: cover; }
+  #hero .container {
+    width: auto;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 900px; }
+    @media (min-width: 768px) {
+      #hero .container {
+        width: 720px;
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (min-width: 1000px) {
+      #hero .container {
+        width: 960px;
+        padding-left: 0;
+        padding-right: 0; } }
+    @media (min-width: 1280px) {
+      #hero .container {
+        width: 1200px;
+        padding-left: 0;
+        padding-right: 0; } }
+    #hero .container img {
+      max-width: 300px;
+      align-self: flex-start; }
+    #hero .container h1 {
+      align-self: center; }
