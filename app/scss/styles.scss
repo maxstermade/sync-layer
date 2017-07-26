@@ -2,7 +2,10 @@
 @import 'variables';
 @import 'mixins';
 
-
+img {
+	max-width: 100%;
+	height: auto !important;
+}
 
 /**** Typography Defaults ****/
 body {
@@ -27,22 +30,19 @@ h2 {
 }
 
 h3 {
-  font-size: $font-2;
+  font-size: $font-3;
 	font-weight: $light;
-	color: $regular;
 }
 
 h4 {
-	font-weight: $light;
-  font-size: $font-3;
+  font-size: $font-2;
   color: $black;
 }
 h5 {
-	font-size: $font-s;
-	font-weight: $xbold;
-	margin-bottom: 1em;
+	font-size: $font-1;
+	font-weight: $bold;
+	margin-bottom: auto;
 	color: $gray;
-	text-transform: uppercase;
 }
 
 p {
@@ -68,6 +68,7 @@ a {
 	letter-spacing: 0.05em;
 
   &.button {
+		display: inline-block;
 		text-transform: uppercase;
 		color: $white;
 		padding: 10px 40px;
@@ -87,25 +88,202 @@ a {
 }
 
 
-/**** Global Styles ****/
+//start of Hero section
 #hero {
   position: relative;
   background-image: url(/images/hero.jpg);
   background-size: cover;
 
   .container {
-    @include wrapper(auto, 20px);
-		display: flex;
-		flex-direction: column;
-		min-height: 900px;
+    @include wrapper(auto, 50px, 100%);
 
 		img {
 			max-width: 300px;
-			align-self: flex-start;
+			margin-bottom: 100px;
 		}
 
 		h1 {
-			align-self: center;
+			display: inline-block;
+			margin-bottom: 100px;
 		}
   }
 }
+
+@media (min-width: $breakpoint-laptop) {
+	#hero {
+		.container {
+			img {
+					margin-bottom: 150px;
+			}
+
+			h1 {
+				display: block;
+				width: 75%;
+				margin-bottom: 200px;
+				font-size: 3.333em;
+			}
+		}
+	}
+}
+//end of Hero section
+
+//start of Products section
+#products {
+	@include wrapper(auto, 50px);
+
+	h2 {
+		font-size: $font-4;
+		color: $orange;
+		font-weight: $bold;
+		margin-bottom: $global-padding;
+	}
+
+	.product {
+		.content {
+			@include border-box();
+			padding: $global-padding 0px;
+
+			h3 {
+				font-size: $font-5;
+				margin-bottom: $global-padding;
+			}
+		}
+	}
+}
+
+@media (min-width: $breakpoint-laptop) {
+	#products {
+		padding: 100px 0px;
+
+		.product {
+			.content {
+				display: inline-block;
+				width: 49%;
+				padding-top: 0px;
+				vertical-align: top;
+
+				h3 {
+					font-size: 3em;
+				}
+
+				p:last-of-type {
+					margin-bottom: $global-padding * 2;
+				}
+			}
+
+			figure {
+				display: inline-block;
+				margin-left: 2%;
+				margin-right: -4px;
+				width: 49%;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+// end of Products section
+
+#about {
+	background-color: $lightGray;
+
+	.container {
+		@include wrapper(auto, 50px);
+
+		.content {
+			@include border-box();
+			margin-bottom: $global-padding;
+
+			h2 {
+				font-weight: $light;
+				margin-bottom: $global-padding * 2;
+			}
+		}
+
+		aside {
+			@include border-box();
+			background-color: $blue;
+			padding: $global-padding;
+
+			h3 {
+				color: $white;
+				margin-bottom: $global-padding * 1.5;
+			}
+
+			h5 {
+				color: $white;
+			}
+
+			p {
+				color: $white;
+			}
+
+			a {
+				color: $white;
+
+				&:hover, &:focus {
+					color: $orange;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $breakpoint-laptop) {
+	#about {
+		.container {
+			padding: 100px 0px;
+			overflow-y: hidden;
+			.content {
+				display: block;
+				float: left;
+				width: 48%;
+
+				h2 {
+					font-size: 3em;
+				}
+			}
+
+			aside {
+				display: block;
+				float: left;
+				margin-left: 3%;
+				width: 49%;
+
+				h3 {
+					font-size: 3.00em;
+				}
+			}
+		}
+	}
+}
+//end of About section
+
+//start of footer
+footer {
+	@include wrapper(auto, $global-padding);
+
+	img {
+		max-width: 200px;
+		margin-bottom: $global-padding;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+@media (min-width: $breakpoint-laptop) {
+	footer {
+		img {
+			margin-bottom: 0px;
+		}
+
+		span {
+			width: 50%;
+			float: right;
+			text-align: right;
+			margin-top: $global-padding;
+		}
+	}
+}
+//end of footer

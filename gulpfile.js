@@ -11,6 +11,7 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var ghPages = require('gulp-gh-pages');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -83,6 +84,12 @@ gulp.task('clean', function() {
 
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+});
+
+//Deploy static site to GH Pages
+gulp.task('deploy', function() {
+  return gulp.src('./**/*')
+    .pipe(ghPages());
 });
 
 // Build Sequences
