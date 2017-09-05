@@ -138,7 +138,8 @@ a {
     padding: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 100%; }
+    max-width: 100%;
+    text-align: right; }
     @media (min-width: 768px) {
       #hero .container {
         width: 720px;
@@ -160,7 +161,8 @@ a {
     #hero .container h1 {
       font-size: 2em;
       display: inline-block;
-      margin-bottom: 100px; }
+      margin-bottom: 100px;
+      text-align: left; }
 
 @media (min-width: 1000px) {
   #hero .container img {

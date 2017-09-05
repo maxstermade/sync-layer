@@ -101,16 +101,19 @@ a {
 
   .container {
     @include wrapper(auto, 50px, 100%);
+		text-align: right;
 
 		img {
 			max-width: 300px;
 			margin-bottom: 50px;
+
 		}
 
 		h1 {
 			font-size: 2em;
 			display: inline-block;
 			margin-bottom: 100px;
+			text-align: left;
 		}
   }
 }
