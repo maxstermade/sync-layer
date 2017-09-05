@@ -194,33 +194,7 @@ a {
 			margin-bottom: $global-padding;
 		}
 
-		.contact {
-			li {
-				margin: 25px 0px;
-				i {
-					display: inline-block;
-					height: 30px;
-					width: 30px;
-					margin-right: $global-padding;
-					background-size: contain;
-					background-position: center center;
-					vertical-align: middle;
 
-					&.phone {
-						background-image: url('../images/icon_phone.png');
-					}
-
-					&.email {
-						background-image: url('../images/icon_email.png');
-					}
-				}
-
-				p {
-					display: inline-block;
-					vertical-align: middle;
-				}
-			}
-		}
 	}
 }
 
@@ -232,13 +206,6 @@ a {
 
 			.content {
 				display: block;
-			}
-
-			.contact {
-				li {
-					display: inline-block;
-					width: 25%;
-				}
 			}
 		}
 	}
@@ -252,6 +219,36 @@ footer {
 	.container {
 		@include wrapper(auto, $global-padding);
 		text-align: center;
+	}
+
+	.contact {
+		float: left;
+		li {
+			margin: 25px 0px;
+			i {
+				display: inline-block;
+				height: 30px;
+				width: 30px;
+				margin-right: $global-padding;
+				background-size: contain;
+				background-position: center center;
+				vertical-align: middle;
+
+				&.phone {
+					background-image: url('../images/icon_phone.png');
+				}
+
+				&.email {
+					background-image: url('../images/icon_email.png');
+				}
+			}
+
+			p {
+				display: inline-block;
+				vertical-align: middle;
+				color: white;
+			}
+		}
 	}
 
 	img {
@@ -272,6 +269,13 @@ footer {
 		.container {
 			padding: 50px 0px;
 			text-align: right;
+		}
+
+		.contact {
+			li {
+				display: inline-block;
+				
+			}
 		}
 	}
 }

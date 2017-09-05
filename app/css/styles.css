@@ -251,33 +251,13 @@ a {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-bottom: 25px; }
-    #about .container .contact li {
-      margin: 25px 0px; }
-      #about .container .contact li i {
-        display: inline-block;
-        height: 30px;
-        width: 30px;
-        margin-right: 25px;
-        background-size: contain;
-        background-position: center center;
-        vertical-align: middle; }
-        #about .container .contact li i.phone {
-          background-image: url("../images/icon_phone.png"); }
-        #about .container .contact li i.email {
-          background-image: url("../images/icon_email.png"); }
-      #about .container .contact li p {
-        display: inline-block;
-        vertical-align: middle; }
 
 @media (min-width: 1000px) {
   #about .container {
     padding: 100px 0px;
     overflow-y: hidden; }
     #about .container .content {
-      display: block; }
-    #about .container .contact li {
-      display: inline-block;
-      width: 25%; } }
+      display: block; } }
 
 footer {
   background-color: #555555; }
@@ -305,6 +285,26 @@ footer {
         width: 1200px;
         padding-left: 0;
         padding-right: 0; } }
+  footer .contact {
+    float: left; }
+    footer .contact li {
+      margin: 25px 0px; }
+      footer .contact li i {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        margin-right: 25px;
+        background-size: contain;
+        background-position: center center;
+        vertical-align: middle; }
+        footer .contact li i.phone {
+          background-image: url("../images/icon_phone.png"); }
+        footer .contact li i.email {
+          background-image: url("../images/icon_email.png"); }
+      footer .contact li p {
+        display: inline-block;
+        vertical-align: middle;
+        color: white; }
   footer img {
     max-width: 250px;
     margin-bottom: 25px;
@@ -317,4 +317,6 @@ footer {
 @media (min-width: 1000px) {
   footer .container {
     padding: 50px 0px;
-    text-align: right; } }
+    text-align: right; }
+  footer .contact li {
+    display: inline-block; } }
