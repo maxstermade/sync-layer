@@ -224,7 +224,7 @@ footer {
 	.contact {
 		float: left;
 		li {
-			margin: 25px 0px;
+			margin: 25px 25px;
 			i {
 				display: inline-block;
 				height: 30px;
@@ -254,8 +254,7 @@ footer {
 	img {
 		max-width: 250px;
 		margin-bottom: $global-padding;
-		-webkit-filter: brightness(0) invert(1);
-		filter: brightness(0) invert(1);
+
 	}
 
 	span {
@@ -264,17 +263,26 @@ footer {
 	}
 }
 
-@media (min-width: $breakpoint-laptop) {
+
+@media (min-width: $breakpoint-tablet) {
 	footer {
 		.container {
 			padding: 50px 0px;
 			text-align: right;
+			overflow: hidden;
 		}
 
+		.right {
+			float: right;
+		}
 		.contact {
+			width: 50%;
+			text-align: left;
 			li {
 				display: inline-block;
-				
+				&:first-of-type {
+					margin-top: 0px;
+				}
 			}
 		}
 	}

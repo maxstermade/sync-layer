@@ -288,7 +288,7 @@ footer {
   footer .contact {
     float: left; }
     footer .contact li {
-      margin: 25px 0px; }
+      margin: 25px 25px; }
       footer .contact li i {
         display: inline-block;
         height: 30px;
@@ -307,16 +307,22 @@ footer {
         color: white; }
   footer img {
     max-width: 250px;
-    margin-bottom: 25px;
-    -webkit-filter: brightness(0) invert(1);
-    filter: brightness(0) invert(1); }
+    margin-bottom: 25px; }
   footer span {
     display: block;
     color: #fff; }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   footer .container {
     padding: 50px 0px;
-    text-align: right; }
-  footer .contact li {
-    display: inline-block; } }
+    text-align: right;
+    overflow: hidden; }
+  footer .right {
+    float: right; }
+  footer .contact {
+    width: 50%;
+    text-align: left; }
+    footer .contact li {
+      display: inline-block; }
+      footer .contact li:first-of-type {
+        margin-top: 0px; } }
